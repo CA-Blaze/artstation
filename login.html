@@ -8,7 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>course-1</title>
     <script src="js/loginout.js"></script>
-
+    <script>
+        
+        function myFunction() {
+            if(localStorage.getItem('login')=="true"){
+                window.history.back();
+                window.location.reload();
+            }
+          console.log('');
+        }
+        myFunction();
+    
+      </script>
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -21,10 +32,9 @@
         h2{
             color: #f7f7f7;
             padding-top: 1rem;
-            font-size: medium;
         }
         label{
-            color: #f7f7f7fd;
+            color: #f7f7f7;
             font-size: medium;
 
         }
@@ -33,11 +43,7 @@
             font-size: medium;
         }
         p a{
-            color: rgb(249, 248, 250);
-            font-size: large;
-        }
-        p a:hover{
-            color: aqua;
+            color: rgb(0, 105, 243);
         }
 
 
@@ -49,59 +55,25 @@
             max-width: 400px;
             margin: 0 auto;
             padding: 40px;
-            
-            border: 0px solid #ffffff;
+            border: 0px solid #ccc;
             border-radius: 2px;
         }
         input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            background-color: rgba(250, 250, 250, 0.589);
-            border: 1px solid #fcfafa56;
-            border-radius: 5px;
-            color: #000000;
-            font-size: large;
-            text-transform: lowercase;
-        
-            
-        }
-        input[type="submit"]{
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            background-color: rgba(250, 250, 250, 0.589);
-            border: 1px solid #fcfafa56;
-            border-radius: 5px;
-            color: #000000;
-            font-size: large;
-            
-        }
-
-
-        input[type="text"]:hover{
-            border-color: aqua;
-            padding-bottom: 0.5rem;
-        }
-        
-        input[type="password"]:hover{
-            border-color: aqua;
-            padding-bottom: 0.5rem;
-        }
-        
-
+        input[type="password"],
         input[type="submit"] {
-            background-color: #00000059;
-            color: rgb(243, 243, 243);
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #f7f7f7;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: rgb(0, 0, 0);
             cursor: pointer;
-            font-size: medium;
         }
         input[type="submit"]:hover {
-            background-color: #f0f3f0c7;
-            color: #000000;
-            padding-inline-start: 2rem;
-            border-color: aqua;
+            background-color: #00d40b;
         }
      
        
@@ -109,16 +81,12 @@
     </style>
 </head>
 <body>
-<!-- header section starts  -->
+    <header class="header">
 
-<header class="header">
+        <a href="home.html" class="logo"><img id="hand" src="./images/logo 7.png"> <span style="margin-top:10px; margin-left:10px;">artstation </span> </a>
 
-    <a href="home.html" class="logo"><img id="hand" src="./images/logo 7.png"> <span style="margin-top:10px; margin-left:10px;">artstation </span> </a>
-    
-    
+    <div id="menu-btn" class="fas fa-bars"></div>
 
-    <!--div id="menu-btn" class="fas fa-bars"></div>
-    <button id="logout-btn" onclick=logout(this)>Logout</button-->
     <nav class="navbar">
         <ul>
             <li><a href="home.html">home</a></li>
@@ -134,30 +102,17 @@
                 <ul>
                     <li><a href="teachers.html">teachers</a></li>
                     <li><a href="blog.html">blogs</a></li>
-                    
                 </ul>
             </li>
             <li><a href="contact.html">contact</a></li>
-            <div id="menu-btn" class="fas fa-bars"></div>
-            <button id="logout-btn" onclick=logout(this)>Logout</button>
-            <li id="login-btn"><a href="login.html">login</a>
-                <!--ul>
-                    <li><a href="teacherlogin.html">Teacher login</a></li>
-                </ul-->
-            </li>
-            
-
         </ul>
     </nav>
 
 </header>
 
-<!-- header section ends -->
-
     <div class="container">
         <h2>Login</h2>
         <form  >
-            
             <label for="username_or_email">Username/email:</label>
             <input type="text" id="username" name="username" required>
 
@@ -180,10 +135,9 @@
             <h3>explore</h3>
             <a href="home.html"> <i class="fas fa-arrow-right"></i> home </a>
             <a href="about.html"> <i class="fas fa-arrow-right"></i> about </a>
-            <!--a href="course-1.html"> <i class="fas fa-arrow-right"></i> Dance </a>
-            <a href="course-2.html"> <i class="fas fa-arrow-right"></i>Sketch </a>
-            <a href="course-3.html"> <i class="fas fa-arrow-right"></i>music</a-->
-            <a href="all-course.html"> <i class="fas fa-arrow-right"></i> all courses</a>
+            <a href="course-1.html"> <i class="fas fa-arrow-right"></i> course-1 </a>
+            <a href="course-2.html"> <i class="fas fa-arrow-right"></i>course-2 </a>
+            <a href="course-3.html"> <i class="fas fa-arrow-right"></i> course-3 </a>
             <a href="teachers.html"> <i class="fas fa-arrow-right"></i> teachers </a>
             <a href="blog.html"> <i class="fas fa-arrow-right"></i> blog </a>
             <a href="contact.html"> <i class="fas fa-arrow-right"></i> contact </a>
@@ -191,12 +145,12 @@
 
         <div class="box">
             <h3>categories</h3>
-            <a href="course-1.html"> <i class="fas fa-arrow-right"></i> Dance </a>
-            <a href="course-2.html"> <i class="fas fa-arrow-right"></i> Sketch</a>
-            <a href="course-3.html"> <i class="fas fa-arrow-right"></i>Music</a>
-            <!--a href="#"> <i class="fas fa-arrow-right"></i> seo marketing</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> web design </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> graphic design</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> UI / UX design</a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> seo marketing</a>
             <a href="#"> <i class="fas fa-arrow-right"></i> digital marketing</a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> email marketing</a-->
+            <a href="#"> <i class="fas fa-arrow-right"></i> email marketing</a>
             <a href="all-course.html"> <i class="fas fa-arrow-right"></i> all courses</a>
         </div>
 
@@ -204,19 +158,18 @@
             <h3>quick links</h3>
             <a href="#"> <i class="fas fa-arrow-right"></i> my account </a>
             <a href="#"> <i class="fas fa-arrow-right"></i> feedback </a>
-            <!--a href="#"> <i class="fas fa-arrow-right"></i> help center </a-->
+            <a href="#"> <i class="fas fa-arrow-right"></i> help center </a>
             <a href="#"> <i class="fas fa-arrow-right"></i> certificates </a>
-            <!--a href="#"> <i class="fas fa-arrow-right"></i> newsletter </a-->
-            <!--a href="teacherlogin.html"> <i class="fas fa-arrow-right"></i> become teacher </a-->
+            <a href="#"> <i class="fas fa-arrow-right"></i> newsletter </a>
         </div>
 
         <div class="box">
             <h3>follow us</h3>
-            <!--<a href="#"> <i class="fab fa-facebook-f"></i> facebook </a-->
-            <a href="https://twitter.com/i/flow/login"> <i class="fab fa-twitter"></i> twitter </a>
-            <!--a href="#"> <i class="fab fa-linkedin"></i> linkedin </a-->
-            <a href="https://www.instagram.com/"> <i class="fab fa-instagram"></i> instagram </a>
-            <!--a href="#"> <i class="fab fa-pinterest"></i> pinterest </a-->
+            <!--<a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>-->
+            <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
             <a href="https://github.com/"> <i class="fab fa-github"></i> github </a>
         </div>
 

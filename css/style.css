@@ -22,14 +22,16 @@
 
 
 #logout-btn {
-  padding: 3.2rem;
+  margin: 5px;
+    line-height: 1px;
+    height: 20px;
+  padding: 2.2rem;
   border-radius: 2rem;
   display: block;
   font-size: 1.7rem;
-  background-color: #02020223;
+  background-color: #ff1d1dfb;
   color: #fff;
   border-top: 0.2rem solid #000000b7;
-  /* border-left: 0.1rem solid #000000b7; */ 
   
 }
 
@@ -39,8 +41,12 @@
 }
 
 
-
-
+#login-btn > a{
+  background-color: green;
+}
+#login-btn > a:hover{
+  background: #03060f67;
+}
 
 
 
@@ -179,6 +185,7 @@ section {
 }
 
 .header .navbar ul li {
+
   position: relative;
   float: left;
 }
@@ -189,7 +196,10 @@ section {
 }
 
 .header .navbar ul li a {
-  padding: 3.2rem;
+  margin: 5px;
+    line-height: 1px;
+    height: 20px;
+  padding: 2.2rem;
   border-radius: 2rem;
   display: block;
   font-size: 1.7rem;

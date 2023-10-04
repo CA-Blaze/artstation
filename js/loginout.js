@@ -4,6 +4,7 @@ function logout(e) {
     localStorage.removeItem("login"); // Remove login status from localStorage
     e.style.display='none';
     alert("Logout Succesful");
+    window.location.reload();
 
 }
 
@@ -18,9 +19,9 @@ function login() {
     fetch("users.txt")
         .then(response => response.text())
         .then(data => {
-            const usersArray = data.split("\r\n");
+            const usersArray = data.split("\n");
             usersArray.pop();
-    
+
             const credentials = usersArray.map(user => user.split(":"));
             
             const foundUser = credentials.find(([storedUsername, storedPassword]) => {
@@ -30,8 +31,8 @@ function login() {
             if (foundUser) {
                 localStorage.setItem("login", "true"); // Set login status in localStorage
                 // shwobtnhandle();
-                alert("login sucessful")
-                history.back();
+              
+                window.location.href = '/';  // Assign the URL as a string
             } else {
                 // Handle failed authentication
                 alert("wrong details");
