@@ -39,7 +39,9 @@ app.post('/signup', (req, res) => {
     res.status(200).redirect('/login.html');
   }
 });
-
+app.use((req,res)=>{
+  res.status(2000).redirect('/home.html');
+})
 app.listen(PORT, () => {
   console.log('Server is running on port ' + PORT);
 });
