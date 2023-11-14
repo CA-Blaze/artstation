@@ -43,10 +43,13 @@
 
 
 #login-btn > a{
-  background-color: green;
+  background-color: rgba(239, 239, 239, 0.151);
+  color: #fff;
 }
 #login-btn > a:hover{
-  background: #03060f67;
+  background: rgba(203, 194, 194, 0.627);
+  padding-inline-start: 2rem;
+  color: rgb(22, 1, 255) ;
 }
 
 
