@@ -29,15 +29,16 @@
   border-radius: 2rem;
   display: block;
   font-size: 1.7rem;
-  background-color: #ff1d1dfb;
+  background-color: rgba(239, 239, 239, 0.151);
   color: #fff;
   border-top: 0.2rem solid #000000b7;
   
 }
 
 #logout-btn:hover {
-  background: #d4bfd3a8;
+  background: rgba(249, 249, 249, 0.744);
   padding-inline-start: 2rem;
+  color: #e50909;
 }
 
 
